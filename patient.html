@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="x-icon" href="images/993324.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient_Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/patientpro.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="index.html">
+              <span class="icon"><i class="fa-solid fa-tooth"></i></span>
+              <span class="title">Dental Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <span class="icon"
+                ><ion-icon name="home-outline"></ion-icon
+              ></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="patients.html">
+              <span class="icon"
+                ><ion-icon name="people-outline"></ion-icon
+              ></span>
+              <span class="title">Patients</span>
+            </a>
+          </li>
+          <li>
+            <a href="add.html">
+              <span class="icon"
+                ><ion-icon name="person-add-outline"></ion-icon
+              ></span>
+              <span class="title">Add Patients</span>
+            </a>
+          </li>
+          <li>
+            <a href="sections.html">
+              <span class="icon"
+                ><ion-icon name="apps-outline"></ion-icon
+              ></span>
+              <span class="title">Sections</span>
+            </a>
+          </li>
+          <li>
+            <a href="setting.html">
+              <span class="icon"
+                ><ion-icon name="settings-outline"></ion-icon
+              ></span>
+              <span class="title">Setting</span>
+            </a>
+          </li>
+          <li>
+            <a href="login.html">
+              <span class="icon"
+                ><ion-icon name="log-out-outline"></ion-icon
+              ></span>
+              <span class="title">Log Out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- main ==============================================================================-->
+      <div class="main">
+        <div class="topbar">
+          <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+        </div>
+
+        <!-- cards ------------------------------------------------------------------------->
+        <form action="">
+          <div class="cardbox">
+            <div class="card">
+              <h2>Patient_Image :</h2>
+              <div class="upload">
+                <input type="file" id="file" accept="image/*" hidden />
+                <div class="img-area" data-img="">
+
+                    <img src="images/xperson_1.jpg.pagespeed.ic.a2MnMHMs44.webp" alt="">
+                  <i class="bx bxs-cloud-upload icon"></i>
+                  <h3>Upload Image</h3>
+                </div>
+                <button class="select-image" style="display: none;">Select Image</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="personal">
+                <h2>Personal Data :</h2>
+                <div class="name">
+                  <div class="label">
+                    <label for="">Patient_Name</label>
+                  </div>
+                  <div class="input">
+                    <input type="text" value="Mohamed Ashraf" />
+                  </div>
+                </div>
+
+                <div class="name">
+                  <div class="label">
+                    <label for="">Date_of_Session</label>
+                  </div>
+                  <div class="input">
+                    <input type="text" value="17/3/2024"/>
+                  </div>
+                  
+                </div>
+
+                <div class="name">
+                  <div class="label">
+                    <label for="">Age</label>
+                  </div>
+                  <div class="input">
+                    <input type="text" value="22"/>
+                  </div>
+                </div>
+
+                <div class="name">
+                  <div class="label">
+                    <label for="">Address</label>
+                  </div>
+                  <div class="input">
+                    <input type="text" value="minitelnaser-eldqhlia"/>
+                  </div>
+                </div>
+
+                <div class="name">
+                  <div class="label">
+                    <label for="">Phone_Number</label>
+                  </div>
+                  <div class="input">
+                    <input type="tel" placeholder="Phone_Numeber" value="0100695641" />
+                  </div>
+                </div>
+
+                <div class="name">
+                  <div class="label">
+                    <label for="">Job</label>
+                  </div>
+                  <div class="input">
+                    <input type="text" value="Student" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="sections">
+                <h2>Section :</h2>
+                <div class="section">
+                  <div>
+                    <input
+                      type="radio"
+                      value="Maxillo-Facial surgery"
+                      id="Maxillo-Facial surgery"
+                      name="section" checked
+                    />
+                  </div>
+                  <div>
+                    <label for="">Maxillo-Facial surgery</label>
+                  </div>
+                </div>
+
+                <div class="section">
+                  <div>
+                    <input
+                      type="radio"
+                      value="Fixed Prosthodontics"
+                      id="Fixed Prosthodontics"
+                      name="section"
+                    />
+                  </div>
+                  <div>
+                    <label for="">Fixed Prosthodontics</label>
+                  </div>
+                </div>
+
+                <div class="section">
+                  <div>
+                    <input
+                      type="radio"
+                      value="Removable Prosthodontics"
+                      id="Removable Prosthodontics"
+                      name="section"
+                    />
+                  </div>
+                  <div>
+                    <label for="">Removable Prosthodontics</label>
+                  </div>
+                </div>
+
+                <div class="section">
+                  <div>
+                    <input
+                      type="radio"
+                      value="Operative"
+                      id="Operative"
+                      name="section"
+                    />
+                  </div>
+                  <div>
+                    <label for="">Operative</label>
+                  </div>
+                </div>
+                <div class="section">
+                  <div>
+                    <input
+                      type="radio"
+                      value="Endodontic"
+                      id="Endodontic"
+                      name="section"
+                    />
+                  </div>
+                  <div>
+                    <label for="">Endodontic</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h2 style="display: block">Medical History:</h2>
+              <div class="mhistorys">
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox"  checked/>
+                  </div>
+                  <div>
+                    <label for="">Heart_trouble</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">Hypertension</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">pregnancy</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" checked/>
+                  </div>
+                  <div>
+                    <label for="">Diabetes</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">Hepatitis</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">AIDS</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">TB</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">Allergies</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" checked/>
+                  </div>
+                  <div>
+                    <label for="">Anemia</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">Rheu.Arthritis</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">Rad.Therapy</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">Hemophilia</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">Aspirin intake</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" checked/>
+                  </div>
+                  <div>
+                    <label for="">Kidney_Trouble</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">Asthma</label>
+                  </div>
+                </div>
+                <div class="mhistory" style="font-size: 10px">
+                  <div>
+                    <input type="checkbox" />
+                  </div>
+                  <div>
+                    <label for="">Hey_fever</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h2>Medical History & Present Medication :</h2>
+              <textarea
+                name=""
+                id=""
+                cols="90"
+                rows="14"
+                placeholder="Medical_History....."
+              >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam sint perferendis laborum modi recusandae cum, nobis facilis mollitia vero explicabo odio harum sequi corrupti excepturi, iusto rem vel voluptates! Voluptatum.</textarea>
+            </div>
+
+            <div class="card">
+              <h2>Chief Complain :</h2>
+              <textarea
+                name=""
+                id=""
+                cols="90"
+                rows="14"
+                placeholder="Cheif Complain....."
+              >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus non molestiae architecto nemo, incidunt alias voluptates voluptate illo! Eaque ipsum nemo illum tempore error delectus dolore ut sint nesciunt facere?</textarea>
+            </div>
+
+            <div class="card">
+              <h2>Diagnosis :</h2>
+              <textarea
+                name=""
+                id=""
+                cols="90"
+                rows="14"
+                placeholder="Diagnosis....."
+              >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, itaque! Dolorem delectus nemo incidunt eveniet dicta nulla iusto impedit aperiam, et culpa, consectetur doloribus odio magni modi beatae ipsa voluptas!</textarea>
+            </div>
+          </div>
+
+          <div class="card" style="padding:10px ;">
+            <h2>Patient_Images:</h2>
+            <div id="drop-area">
+              <div id="gallery">
+                <img src="images/smiling-dental-porcelain-veneers-before-after-16.jpg" alt="">
+                <img src="images/images.jpg" alt="">
+              </div>
+            </div>
+          </div>  
+          
+
+          <div class="btn">
+            <button class="submit">Modify</button>
+            <button class="submit" type="button">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="assets/main.js"></script>
+    <script src="assets/addimage.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,843 @@
+{
+	"info": {
+		"_postman_id": "3ad70fe6-a4d2-4941-8959-cbae92bb214f",
+		"name": "patient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23289302"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234567",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTI4MDkwNjIsImV4cCI6MTcxMjgxMjY2MiwibmJmIjoxNzEyODA5MDYyLCJqdGkiOiI5bDE1eHlhYXNGcG5UR3ZYIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VyCf7VU7ml5qT6NtrqMdKpXVIO7XA5XVsf1ZFzHzpFE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMGFjMS0xNTYtMTk3LTIxNy0yMi5uZ3Jvay1mcmVlLmFwcC9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcxMDAyMDA2OSwibmJmIjoxNzEwMDIwMDY5LCJqdGkiOiJ2TW9QSnA2eExVUHVDT3VXIiwic3ViIjoiNDgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.rSUT1rI7SxzsIiNf1-V0k_DQZDEpM2RXeNaI0LqcyLc",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTA5Mzk4MzMsIm5iZiI6MTcxMDkzOTgzMywianRpIjoiaUQ3UVB3aW1paFJveDVMayIsInN1YiI6IjciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.lEp7IzF8cQ1eTu8yYTAKq5OV99gNigj0uyEjey-xn68",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "current_password",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/updatePassword",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPatient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTI4NTc5MTQsImV4cCI6MTcxMjg2MTUxNCwibmJmIjoxNzEyODU3OTE0LCJqdGkiOiJoWFJiR2ZXVUZuZGJKNnlUIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vTSYjZNq7NKI26Usw9u8Z8mYNXeZeFPPEa2PKo1mKA0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Patient_Name",
+									"value": "ahmed44",
+									"type": "text"
+								},
+								{
+									"key": "Date_of_Birth",
+									"value": "2005/5/8",
+									"type": "text"
+								},
+								{
+									"key": "Phone_Number",
+									"value": "012545485",
+									"type": "text"
+								},
+								{
+									"key": "Job",
+									"value": "eng",
+									"type": "text"
+								},
+								{
+									"key": "section_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/Ahmed Osama/Desktop/30x40 new.png"
+								},
+								{
+									"key": "Address",
+									"value": "adsasds ",
+									"type": "text"
+								},
+								{
+									"key": "section_ids[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "section_ids[]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "MedicalHistory",
+									"value": "adsljioadsjo",
+									"type": "text"
+								},
+								{
+									"key": "ChiefComplain",
+									"value": "asddddddsassa",
+									"type": "text"
+								},
+								{
+									"key": "Diagnosis",
+									"value": "aafas weasad",
+									"type": "text"
+								},
+								{
+									"key": "photos[]",
+									"type": "file",
+									"src": [
+										"/E:/IMG_20211224_201206_951.jpg",
+										"/E:/IMG_20211224_201243_161.jpg"
+									]
+								},
+								{
+									"key": "photos[]",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/addPatient",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"addPatient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddSection",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTI4MDYyMjUsImV4cCI6MTcxMjgwOTgyNSwibmJmIjoxNzEyODA2MjI1LCJqdGkiOiJiaEg5cFZ5WURteXo2ZExiIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3rDrE8z906HSqDAKEdXOaX3uamt1_lRyUjlSgGQK77M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "NameOfSection",
+									"value": "dental",
+									"type": "text"
+								},
+								{
+									"key": "Date_of_Birth",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "Phone_Number",
+									"value": "012545485",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "Job",
+									"value": "eng",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "section_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/Ahmed Osama/Desktop/30x40 new.png",
+									"disabled": true
+								},
+								{
+									"key": "Address",
+									"value": "adsasds ",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "Heart_trouble",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "pregnancy",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "MedicalHistory",
+									"value": "adsljioadsjo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "ChiefComplain",
+									"value": "asddddddsassa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "Diagnosis",
+									"value": "aafas weasad",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/AddSection",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"AddSection"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSection",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTI4NTc5MTQsImV4cCI6MTcxMjg2MTUxNCwibmJmIjoxNzEyODU3OTE0LCJqdGkiOiJoWFJiR2ZXVUZuZGJKNnlUIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vTSYjZNq7NKI26Usw9u8Z8mYNXeZeFPPEa2PKo1mKA0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Patient_Name",
+									"value": "ahmed44",
+									"type": "text"
+								},
+								{
+									"key": "Date_of_Birth",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Phone_Number",
+									"value": "012545485",
+									"type": "text"
+								},
+								{
+									"key": "Job",
+									"value": "eng",
+									"type": "text"
+								},
+								{
+									"key": "section_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/Ahmed Osama/Desktop/30x40 new.png"
+								},
+								{
+									"key": "Address",
+									"value": "adsasds ",
+									"type": "text"
+								},
+								{
+									"key": "Heart_trouble",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "pregnancy",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "MedicalHistory",
+									"value": "adsljioadsjo",
+									"type": "text"
+								},
+								{
+									"key": "ChiefComplain",
+									"value": "asddddddsassa",
+									"type": "text"
+								},
+								{
+									"key": "Diagnosis",
+									"value": "aafas weasad",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/getSection/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"getSection",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPatient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTI4NTc5MTQsImV4cCI6MTcxMjg2MTUxNCwibmJmIjoxNzEyODU3OTE0LCJqdGkiOiJoWFJiR2ZXVUZuZGJKNnlUIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vTSYjZNq7NKI26Usw9u8Z8mYNXeZeFPPEa2PKo1mKA0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/getPatient/37",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"getPatient",
+								"37"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "home",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTI4NTc5MTQsImV4cCI6MTcxMjg2MTUxNCwibmJmIjoxNzEyODU3OTE0LCJqdGkiOiJoWFJiR2ZXVUZuZGJKNnlUIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vTSYjZNq7NKI26Usw9u8Z8mYNXeZeFPPEa2PKo1mKA0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Patient_Name",
+									"value": "ahmed44",
+									"type": "text"
+								},
+								{
+									"key": "Date_of_Birth",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Phone_Number",
+									"value": "012545485",
+									"type": "text"
+								},
+								{
+									"key": "Job",
+									"value": "eng",
+									"type": "text"
+								},
+								{
+									"key": "section_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/Ahmed Osama/Desktop/30x40 new.png"
+								},
+								{
+									"key": "Address",
+									"value": "adsasds ",
+									"type": "text"
+								},
+								{
+									"key": "Heart_trouble",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "pregnancy",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "MedicalHistory",
+									"value": "adsljioadsjo",
+									"type": "text"
+								},
+								{
+									"key": "ChiefComplain",
+									"value": "asddddddsassa",
+									"type": "text"
+								},
+								{
+									"key": "Diagnosis",
+									"value": "aafas weasad",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/index",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSections",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTI4NTc5MTQsImV4cCI6MTcxMjg2MTUxNCwibmJmIjoxNzEyODU3OTE0LCJqdGkiOiJoWFJiR2ZXVUZuZGJKNnlUIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vTSYjZNq7NKI26Usw9u8Z8mYNXeZeFPPEa2PKo1mKA0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Patient_Name",
+									"value": "ahmed44",
+									"type": "text"
+								},
+								{
+									"key": "Date_of_Birth",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Phone_Number",
+									"value": "012545485",
+									"type": "text"
+								},
+								{
+									"key": "Job",
+									"value": "eng",
+									"type": "text"
+								},
+								{
+									"key": "section_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/Ahmed Osama/Desktop/30x40 new.png"
+								},
+								{
+									"key": "Address",
+									"value": "adsasds ",
+									"type": "text"
+								},
+								{
+									"key": "Heart_trouble",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "pregnancy",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "MedicalHistory",
+									"value": "adsljioadsjo",
+									"type": "text"
+								},
+								{
+									"key": "ChiefComplain",
+									"value": "asddddddsassa",
+									"type": "text"
+								},
+								{
+									"key": "Diagnosis",
+									"value": "aafas weasad",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/getSections",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"getSections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTI4NjE1NDEsImV4cCI6MTcxMjg2NTE0MSwibmJmIjoxNzEyODYxNTQxLCJqdGkiOiJqZzRWYzJ4NkpQcnFzc0R1Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.GV2RP5u81xzaQvzDK-9Gd95piZOXTAGEkcFs9ktEJFw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Patient_Name",
+									"value": "t",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "Date_of_Birth",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Phone_Number",
+									"value": "012545485",
+									"type": "text"
+								},
+								{
+									"key": "Job",
+									"value": "eng",
+									"type": "text"
+								},
+								{
+									"key": "section_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/Ahmed Osama/Desktop/30x40 new.png"
+								},
+								{
+									"key": "Address",
+									"value": "adsasds ",
+									"type": "text"
+								},
+								{
+									"key": "Heart_trouble",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "pregnancy",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "MedicalHistory",
+									"value": "adsljioadsjo",
+									"type": "text"
+								},
+								{
+									"key": "ChiefComplain",
+									"value": "asddddddsassa",
+									"type": "text"
+								},
+								{
+									"key": "Diagnosis",
+									"value": "aafas weasad",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/search",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
